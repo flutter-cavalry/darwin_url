@@ -1,0 +1,23 @@
+PODS:
+  - darwin_url (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - FlutterMacOS (1.0.0)
+
+DEPENDENCIES:
+  - darwin_url (from `Flutter/ephemeral/.symlinks/plugins/darwin_url/darwin`)
+  - FlutterMacOS (from `Flutter/ephemeral`)
+
+EXTERNAL SOURCES:
+  darwin_url:
+    :path: Flutter/ephemeral/.symlinks/plugins/darwin_url/darwin
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+
+SPEC CHECKSUMS:
+  darwin_url: a6439fcef7fdfdd19ac9f7aa4ffed427d98b1da3
+  FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
+
+PODFILE CHECKSUM: 236401fc2c932af29a9fcf0e97baeeb2d750d367
+
+COCOAPODS: 1.13.0
