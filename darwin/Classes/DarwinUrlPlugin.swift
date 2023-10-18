@@ -30,14 +30,18 @@ public class DarwinUrlPlugin: NSObject, FlutterPlugin {
       
     case "append":
       let url = args["url"] as? String ?? ""
-      let component = args["component"] as? String ?? ""
+      let components = args["components"] as? [String] ?? []
       let isDir = args["isDir"] as! Bool
       guard let urlObj = URL(string: url) else {
         result(FlutterError(code: "PluginError", message: "Invalid URL", details: nil))
         return
       }
-      let newUrl = urlObj.appendingPathComponent(component, isDirectory: isDir)
-      result(newUrl.absoluteString)
+      
+      var u = urlObj
+      for c in components {
+        u = u.appendingPathComponent(c, isDirectory: isDir)
+      }
+      result(u.absoluteString)
       
     case "filePathToUrl":
       let filePath = args["filePath"] as! String

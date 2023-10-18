@@ -1,9 +1,9 @@
 import 'darwin_url_platform_interface.dart';
 
 class DarwinUrl {
-  Future<String> append(String url, String component,
+  Future<String> append(String url, List<String> components,
       {required bool isDir}) async {
-    return DarwinUrlPlatform.instance.append(url, component, isDir: isDir);
+    return DarwinUrlPlatform.instance.append(url, components, isDir: isDir);
   }
 
   Future<String> tmpDir() async {

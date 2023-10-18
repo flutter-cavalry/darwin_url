@@ -23,7 +23,7 @@ abstract class DarwinUrlPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String> append(String url, String component,
+  Future<String> append(String url, List<String> components,
       {required bool isDir}) async {
     throw UnimplementedError('join() has not been implemented.');
   }

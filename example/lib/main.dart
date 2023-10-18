@@ -28,8 +28,8 @@ class _MyAppState extends State<MyApp> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       final tmpDir = await _darwinUrlPlugin.tmpDir();
-      final joinResult =
-          await _darwinUrlPlugin.append(tmpDir, 'foo/bar/一二三', isDir: true);
+      final joinResult = await _darwinUrlPlugin
+          .append(tmpDir, ['foo', '一二三', 'bar'], isDir: true);
       final filePathToUrlResult =
           await _darwinUrlPlugin.filePathToUrl(Directory.systemTemp.path);
       final dirUrlResult = await _darwinUrlPlugin.dirUrl(joinResult);

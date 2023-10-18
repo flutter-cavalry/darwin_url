@@ -10,11 +10,11 @@ class MethodChannelDarwinUrl extends DarwinUrlPlatform {
   final methodChannel = const MethodChannel('darwin_url');
 
   @override
-  Future<String> append(String url, String component,
+  Future<String> append(String url, List<String> components,
       {required bool isDir}) async {
     final res = await methodChannel.invokeMethod<String>('append', {
       'url': url,
-      'component': component,
+      'components': components,
       'isDir': isDir,
     });
     return res ?? '';
