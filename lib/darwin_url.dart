@@ -9,4 +9,8 @@ class DarwinUrl {
   Future<String> tmpDir() async {
     return DarwinUrlPlatform.instance.tmpDir();
   }
+
+  Future<String> filePathToUrl(String filePath) async {
+    return DarwinUrlPlatform.instance.filePathToUrl(filePath);
+  }
 }

@@ -39,6 +39,11 @@ public class DarwinUrlPlugin: NSObject, FlutterPlugin {
       let newUrl = urlObj.appendingPathComponent(component, isDirectory: isDir)
       result(newUrl.absoluteString)
       
+    case "filePathToUrl":
+      let filePath = args["filePath"] as! String
+      let url = URL(fileURLWithPath: filePath)
+      result(url.absoluteString)
+      
     default:
       result(FlutterMethodNotImplemented)
     }

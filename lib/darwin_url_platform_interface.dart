@@ -31,4 +31,8 @@ abstract class DarwinUrlPlatform extends PlatformInterface {
   Future<String> tmpDir() async {
     throw UnimplementedError('tmpDir() has not been implemented.');
   }
+
+  Future<String> filePathToUrl(String filePath) async {
+    throw UnimplementedError('filePathToUrl() has not been implemented.');
+  }
 }

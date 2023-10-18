@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:darwin_url/darwin_url.dart';
 
@@ -15,6 +17,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _tmpDir = '';
   String _joinResult = '';
+  String _filePathToUrlResult = '';
   final _darwinUrlPlugin = DarwinUrl();
 
   @override
@@ -25,9 +28,12 @@ class _MyAppState extends State<MyApp> {
       final tmpDir = await _darwinUrlPlugin.tmpDir();
       final joinResult =
           await _darwinUrlPlugin.append(tmpDir, 'foo/bar/一二三', isDir: true);
+      final filePathToUrlResult =
+          await _darwinUrlPlugin.filePathToUrl(Directory.systemTemp.path);
       setState(() {
         _tmpDir = tmpDir;
         _joinResult = joinResult;
+        _filePathToUrlResult = filePathToUrlResult;
       });
     });
   }
@@ -45,7 +51,10 @@ class _MyAppState extends State<MyApp> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('tmpDir: $_tmpDir'),
+                const SizedBox(height: 5),
                 Text('joinResult: $_joinResult'),
+                const SizedBox(height: 5),
+                Text('filePathToUrlResult: $_filePathToUrlResult'),
               ],
             ),
           )),

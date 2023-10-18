@@ -15,4 +15,8 @@ final tmpDir = await _darwinUrlPlugin.tmpDir();
 final joinResult =
   await _darwinUrlPlugin.append(tmpDir, 'foo/bar/一二三', isDir: true);
 // file:/l/private/var/mobile/Containers/Data/ Application/OC5E3F85-BB5A-4501-8C22-C1DC19412F10/tmp/foo/bar/%E4%B8%80%E4%BA%8C%E4%B8%891
+
+// Convert a file path to a URL.
+final filePathToUrlResult =
+  await _darwinUrlPlugin.filePathToUrl(Directory.systemTemp.path);
 ```
