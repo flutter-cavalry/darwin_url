@@ -20,6 +20,10 @@ final joinResult =
 final filePathToUrlResult =
   await _darwinUrlPlugin.filePathToUrl(Directory.systemTemp.path);
 
+// Convert a URL to a file path.
+final urlToFilePathResult =
+  await _darwinUrlPlugin.urlToFilePath(filePathToUrlResult);
+
 // Get the URL of a directory from a file URL.
 final dirUrlResult = await _darwinUrlPlugin.dirUrl(joinResult);
 // file:/l/private/var/mobile/Containers/Data/Application/OC5E3F85-BB5A-4501-8C22-C1DC19412F10/tmp/foo/bar/

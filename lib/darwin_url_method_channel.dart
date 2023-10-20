@@ -35,6 +35,14 @@ class MethodChannelDarwinUrl extends DarwinUrlPlatform {
   }
 
   @override
+  Future<String> urlToFilePath(String url) async {
+    final res = await methodChannel.invokeMethod<String>('urlToFilePath', {
+      'url': url,
+    });
+    return res ?? '';
+  }
+
+  @override
   Future<String> dirUrl(String url) async {
     final res = await methodChannel.invokeMethod<String>('dirUrl', {
       'url': url,
