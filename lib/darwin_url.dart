@@ -21,4 +21,12 @@ class DarwinUrl {
   Future<String> dirUrl(String url) async {
     return DarwinUrlPlatform.instance.dirUrl(url);
   }
+
+  Future<bool> isUbiquitousUrlItem(String url) async {
+    return DarwinUrlPlatform.instance.isUbiquitousUrlItem(url);
+  }
+
+  Future<bool> isUbiquitousPathItem(String filePath) async {
+    return DarwinUrlPlatform.instance.isUbiquitousPathItem(filePath);
+  }
 }

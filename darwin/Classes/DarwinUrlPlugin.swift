@@ -65,6 +65,19 @@ public class DarwinUrlPlugin: NSObject, FlutterPlugin {
       }
       result(urlObj.path)
       
+    case "isUbiquitousUrlItem":
+      let url = args["url"] as? String ?? ""
+      guard let urlObj = URL(string: url) else {
+        result(FlutterError(code: "PluginError", message: "Invalid URL", details: nil))
+        return
+      }
+      result(FileManager.default.isUbiquitousItem(at: urlObj))
+      
+    case "isUbiquitousPathItem":
+      let filePath = args["filePath"] as! String
+      let url = URL(fileURLWithPath: filePath)
+      result(FileManager.default.isUbiquitousItem(at: url))
+      
     default:
       result(FlutterMethodNotImplemented)
     }

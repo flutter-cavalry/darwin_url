@@ -49,4 +49,20 @@ class MethodChannelDarwinUrl extends DarwinUrlPlatform {
     });
     return res ?? '';
   }
+
+  @override
+  Future<bool> isUbiquitousUrlItem(String url) async {
+    final res = await methodChannel.invokeMethod<bool>('isUbiquitousUrlItem', {
+      'url': url,
+    });
+    return res ?? false;
+  }
+
+  @override
+  Future<bool> isUbiquitousPathItem(String filePath) async {
+    final res = await methodChannel.invokeMethod<bool>('isUbiquitousPathItem', {
+      'filePath': filePath,
+    });
+    return res ?? false;
+  }
 }

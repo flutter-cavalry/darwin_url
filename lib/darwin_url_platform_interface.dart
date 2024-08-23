@@ -43,4 +43,13 @@ abstract class DarwinUrlPlatform extends PlatformInterface {
   Future<String> dirUrl(String url) async {
     throw UnimplementedError('dirUrl() has not been implemented.');
   }
+
+  Future<bool> isUbiquitousUrlItem(String url) async {
+    throw UnimplementedError('isUbiquitousUrlItem() has not been implemented.');
+  }
+
+  Future<bool> isUbiquitousPathItem(String filePath) async {
+    throw UnimplementedError(
+        'isUbiquitousPathItem() has not been implemented.');
+  }
 }

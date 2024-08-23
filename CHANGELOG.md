@@ -1,3 +1,7 @@
+## 0.4.0
+
+- Add `isUbiquitousUrlItem` and `isUbiquitousPathItem`
+
 ## 0.3.0
 
 - Added `urlToFilePath`.
