@@ -65,4 +65,12 @@ class MethodChannelDarwinUrl extends DarwinUrlPlatform {
     });
     return res ?? false;
   }
+
+  @override
+  Future<String> basename(String url) async {
+    final res = await methodChannel.invokeMethod<String>('basename', {
+      'url': url,
+    });
+    return res ?? '';
+  }
 }

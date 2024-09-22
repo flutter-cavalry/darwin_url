@@ -52,4 +52,8 @@ abstract class DarwinUrlPlatform extends PlatformInterface {
     throw UnimplementedError(
         'isUbiquitousPathItem() has not been implemented.');
   }
+
+  Future<String> basename(String url) async {
+    throw UnimplementedError('basename() has not been implemented.');
+  }
 }

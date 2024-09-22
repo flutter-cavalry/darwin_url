@@ -1,3 +1,7 @@
+## 0.5.0
+
+- Add `basename`.
+
 ## 0.4.0
 
 - Add `isUbiquitousUrlItem` and `isUbiquitousPathItem`

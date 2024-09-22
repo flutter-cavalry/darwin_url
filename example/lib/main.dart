@@ -20,6 +20,7 @@ class _MyAppState extends State<MyApp> {
   String _filePathToUrlResult = '';
   String _dirUrlResult = '';
   String _urlToFilePathResult = '';
+  String _basenameResult = '';
 
   final _darwinUrlPlugin = DarwinUrl();
 
@@ -36,12 +37,14 @@ class _MyAppState extends State<MyApp> {
       final dirUrlResult = await _darwinUrlPlugin.dirUrl(joinResult);
       final urlToFilePathResult =
           await _darwinUrlPlugin.urlToFilePath(filePathToUrlResult);
+      final basenameResult = await _darwinUrlPlugin.basename(joinResult);
       setState(() {
         _tmpDir = tmpDir;
         _joinResult = joinResult;
         _filePathToUrlResult = filePathToUrlResult;
         _dirUrlResult = dirUrlResult;
         _urlToFilePathResult = urlToFilePathResult;
+        _basenameResult = basenameResult;
       });
     });
   }
@@ -67,6 +70,8 @@ class _MyAppState extends State<MyApp> {
                 Text('dirUrlResult: $_dirUrlResult'),
                 const SizedBox(height: 5),
                 Text('urlToFilePathResult: $_urlToFilePathResult'),
+                const SizedBox(height: 5),
+                Text('basenameResult: $_basenameResult'),
               ],
             ),
           )),
