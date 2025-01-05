@@ -1,3 +1,7 @@
+## 0.6.0
+
+- Add Swfit Package Manager support.
+
 ## 0.5.0
 
 - Add `basename`.

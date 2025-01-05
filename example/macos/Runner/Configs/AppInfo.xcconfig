@@ -11,4 +11,4 @@ PRODUCT_NAME = darwin_url_example
 PRODUCT_BUNDLE_IDENTIFIER = com.flutter-cavalry.darwinUrlExample
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2023 com.flutter-cavalry. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2025 com.flutter-cavalry. All rights reserved.

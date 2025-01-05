@@ -59,18 +59,14 @@ class _MyAppState extends State<MyApp> {
           body: Container(
             padding: const EdgeInsets.all(16),
             child: Column(
+              spacing: 5,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('tmpDir: $_tmpDir'),
-                const SizedBox(height: 5),
                 Text('joinResult: $_joinResult'),
-                const SizedBox(height: 5),
                 Text('filePathToUrlResult: $_filePathToUrlResult'),
-                const SizedBox(height: 5),
                 Text('dirUrlResult: $_dirUrlResult'),
-                const SizedBox(height: 5),
                 Text('urlToFilePathResult: $_urlToFilePathResult'),
-                const SizedBox(height: 5),
                 Text('basenameResult: $_basenameResult'),
               ],
             ),
